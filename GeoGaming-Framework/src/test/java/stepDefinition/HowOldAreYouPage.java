@@ -11,7 +11,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class HowOldAreYouPage extends baseClass {
+public class HowOldAreYouPage extends BaseClassImp {
 
 	// Elements for HowOldAreYouPage
 	@FindBy(xpath = "//h1[@class='logo cursive']")
@@ -50,7 +50,7 @@ public class HowOldAreYouPage extends baseClass {
 
 	@Then("I validate the page title")
 	public void i_validate_the_page_Title(String title) {
-		assertEquals(baseClass.driver.getTitle(), title);
+		assertEquals(BaseClassImp.driver.getTitle(), title);
 
 	}
 
@@ -74,22 +74,22 @@ public class HowOldAreYouPage extends baseClass {
 
 	@When("user keeps your name as blank {string}")
 	public void user_keeps_pranali_as_blank(String name) {
-		baseClass.waitFor(2);
+		BaseClassImp.waitFor(2);
 		yourName.sendKeys(name);
-		baseClass.waitFor(2);
+		BaseClassImp.waitFor(2);
 
 	}
 
 	@When("user clicks on submit button")
 	public void user_clicks_on_submit_button() {
-		baseClass.waitFor(2);
+		BaseClassImp.waitFor(2);
 		submitButton.click();
 
 	}
 
 	@Then("user verify error for your name as {word}")
 	public void user_verify_error_for_your_name(String error) {
-		baseClass.waitFor(6);
+		BaseClassImp.waitFor(6);
 		String actualError = errorForName.getText();
 		System.out.println("error : " + actualError);
 		assertEquals(actualError, error);
@@ -98,22 +98,22 @@ public class HowOldAreYouPage extends baseClass {
 
 	@When("user enters correct your name field as {word}")
 	public void user_enters_correct_yourName(String name) {
-		baseClass.waitFor(2);
+		BaseClassImp.waitFor(2);
 		yourName.sendKeys(name);
-		baseClass.waitFor(1);
+		BaseClassImp.waitFor(1);
 	}
 
 	@When("user enters correct your birthday field as {word}")
 	public void user_enters_correct_yourBrithday(String birthday) {
-		baseClass.waitFor(2);
+		BaseClassImp.waitFor(2);
 		yourBirthday.sendKeys(birthday);
-		baseClass.waitFor(2);
+		BaseClassImp.waitFor(2);
 
 	}
 
 	@Then("user verify error {string} for birthday field")
 	public void user_verify_error_for_your_birthday_field(String error) {
-		baseClass.waitForEC(errorForBirthday, 30);
+		BaseClassImp.waitForEC(errorForBirthday, 30);
 		assertTrue(errorForBirthday.isDisplayed());
 		assertEquals(errorForBirthday.getAttribute("textContent"), error);
 
@@ -127,8 +127,8 @@ public class HowOldAreYouPage extends baseClass {
 
 	@Then("user verify age is displayed as {int}")
 	public void response_code_for_request(int age) {
-		baseClass.waitFor(10);
-		baseClass.waitForEC(CalculatedAge, 30);
+		BaseClassImp.waitFor(10);
+		BaseClassImp.waitForEC(CalculatedAge, 30);
 		assertTrue(CalculatedAge.isDisplayed());
 		String ageIs = CalculatedAge.getAttribute("textContent");
 		System.out.println("Calculated Age is : " + ageIs);
@@ -138,7 +138,7 @@ public class HowOldAreYouPage extends baseClass {
 
 	@Then("user verify hello text is displayed {word}")
 	public void helloText(String name) {
-		baseClass.waitFor(10);
+		BaseClassImp.waitFor(10);
 		System.out.println("Calculated Age is : " + helloText.getAttribute("textContent"));
 		assertEquals(helloText.getAttribute("textContent"), "Hello " + name + "!");
 

@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
-	features = ("C:/Users/prana/GeoGaming/GeoGaming-Framework/src/test/resouces/feature"),
+	features = ("C:/Users/prana/git/repository/GeoGaming-Framework/src/test/resouces/feature"),
 	glue = ("stepDefinition"),
 	plugin = {"pretty" , "junit:target/junitReport/report.xml"},
 	tags = ""

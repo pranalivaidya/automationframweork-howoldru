@@ -14,7 +14,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class baseClass {
+public class BaseClassImp extends extentReportImp{
 
 	public static Properties prop;
 	public static WebDriver driver;

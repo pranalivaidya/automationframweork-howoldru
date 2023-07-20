@@ -20,11 +20,11 @@
 	</properties>
 
 	<dependencies>
-		 <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>4.10.0</version>
-        </dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.10.0</version>
+		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
@@ -53,6 +53,27 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>3.1.5</version>
+		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/com.vimalselvam/cucumber-extentsreport -->
+		<dependency>
+			<groupId>com.vimalselvam</groupId>
+			<artifactId>cucumber-extentsreport</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/org.apache.maven.shared/file-management -->
+		<dependency>
+			<groupId>org.apache.maven.shared</groupId>
+			<artifactId>file-management</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
